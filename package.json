@@ -3,7 +3,13 @@
   "version": "0.0.2",
   "author": "Courtet Ulysse",
   "homepage": "https://github.com/Ulysse37/vite-ts-modal-plugin",
-  "keywords": ["react", "modal-dialog", "modal", "dialog", "react-component"],
+  "keywords": [
+    "react",
+    "modal-dialog",
+    "modal",
+    "dialog",
+    "react-component"
+  ],
   "type": "module",
   "description": "A simple modal dialog component for React",
   "main": "src/index.ts",
