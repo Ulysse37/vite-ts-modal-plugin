@@ -1,41 +1,55 @@
 {
-  "name": "ulysse37-modal-dialog-vite-package",
-  "version": "0.0.2",
+  "name": "ulysse37-modal-package",
+  "version": "0.1.0",
   "author": "Courtet Ulysse",
-  "homepage": "https://github.com/Ulysse37/vite-ts-modal-plugin",
+  "description": "A simple modal dialog component for React",
+  "type": "module",
   "keywords": [
     "react",
     "modal-dialog",
     "modal",
     "dialog",
-    "react-component"
+    "component",
+    "library",
+    "typescript",
+    "vite"
   ],
-  "type": "module",
-  "description": "A simple modal dialog component for React",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "vite"
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.17",
-    "@types/react-dom": "^18.3.5",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.17.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
-    "globals": "^15.13.0",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "^8.18.1",
-    "vite": "^6.0.3"
-  }
+    "@types/node": "^22.5.4",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^4.2.1"
+  },
+  "license": "Apache-2.0"
 }
